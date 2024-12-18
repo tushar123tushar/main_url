@@ -6,11 +6,27 @@
     <title>YouTube Video Downloader</title>
 </head>
 <body>
-    <h1>Download YouTube Video</h1>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">Update-Soon</a>
+      <a href="#contact">Update-Soon</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+
+      </a>
+    </div>
+
+
+<br>
+
     <form method="POST">
-        <label for="video_url">Enter Video URL:</label>
+        <label  class ="video" name="video_url">Enter Video URL:</label>
         <input type="text" name="video_url" id="video_url" required>
-        <button type="submit">Download</button>
+        <button  color = "color" type="submit">Download</button>
     </form>
 
     {% if error %}
@@ -25,20 +41,113 @@
         </video>
     {% endif %}
 </body>
-  <style>
-    h1{
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(222, 255, 207);
-        padding-left: 40%;
-        color: red;
-        border-color: black;
-    }
-    .video{
-        padding-left:38%;
-        padding-top: 30%;
-        color: green;
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
     }
+
+    h1 {
+        text-align: center;
+        background-color: rgba(222, 255, 207, 0.8);
+        padding: 15px;
+        margin: 0;
+        border-bottom: 2px solid #ddd;
+    }
+
+    
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        video {
+            width: 90%;
+        }
+    }
+    label{
+        color: red;
+    }
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(85, 83, 83);
+  color: rgb(253, 253, 253);
+  text-align: center;
+}
+
+
+
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 13px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.color:hover{
+    background-color: whitesmoke;
+    color: red;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
+
+<div class="footer">
+  <p>Made BY  - Tushar verma</p>
+</div>
+    </style>
 </html>
